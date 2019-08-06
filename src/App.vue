@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view name="headersearch"/>
     <keep-alive>
       <router-view/>
@@ -15,7 +14,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

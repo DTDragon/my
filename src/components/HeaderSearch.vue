@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Your body</h2>
-    
+    <router-link to="/">
+    <img src="@/assets/images/logo_small.svg" alt="logo">
+    </router-link>
   </div>
 </template>
 
