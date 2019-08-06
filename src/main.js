@@ -2,7 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import {router} from './router/index'
+import $ from 'jquery'
+import { AjaxPlugin } from 'vux'
+import Meta from 'vue-meta'
+
+Vue.use(Vuex)
+Vue.use(AjaxPlugin)
+Vue.use(Meta)
 
 Vue.config.productionTip = false
 

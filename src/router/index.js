@@ -1,15 +1,29 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import HeaderSearch from '@/components/HeaderSearch'
+import Content from '@/components/Content'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+export const router =  new VueRouter({
+  mode: "history",
   routes: [
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
-    }
+      components: {
+        default : HelloWorld,
+        headersearch: HeaderSearch
+      }
+    },
+    {
+      path: '/content',
+      name: 'Content',
+      components: {
+        default : Content,
+        headersearch: HeaderSearch
+      }
+    },
   ]
 })
