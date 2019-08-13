@@ -7,6 +7,10 @@ import {router} from './router/index'
 import $ from 'jquery'
 import { AjaxPlugin } from 'vux'
 import Meta from 'vue-meta'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+import './libs/fetch.js';    // 使用 CSS
+Vue.use(iView)
 
 // Vue.use(Vuex)
 Vue.use(AjaxPlugin)
