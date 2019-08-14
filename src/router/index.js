@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import HeaderSearch from '@/components/HeaderSearch'
-import Content from '@/components/Content'
+import DemoContent from '@/components/DemoContent'
 
 Vue.use(VueRouter)
 
@@ -12,18 +12,28 @@ export const router =  new VueRouter({
     {
       path: '/',
       name: 'HelloWorld',
-      components: {
-        default : HelloWorld,
-        headersearch: HeaderSearch
-      }
+      component: HelloWorld,
     },
     {
-      path: '/content',
-      name: 'Content',
-      components: {
-        default : Content,
-        headersearch: HeaderSearch
-      }
+      path: '/democontent',
+      name: 'DemoContent',
+      component: DemoContent,
     },
+    // {
+    //   path: '/headersearch',
+    //   name: 'helloworld',
+    //   components: {
+    //     helloworld : HelloWorld,
+    //     // headersearch: HeaderSearch
+    //   }
+    // },
+    // {
+    //   path: '/content',
+    //   name: 'Content',
+    //   components: {
+    //     default : Content,
+    //     headersearch: HeaderSearch
+    //   }
+    // },
   ]
 })

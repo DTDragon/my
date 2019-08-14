@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <router-view name="headersearch"/>
-    <keep-alive>
-      <router-view/>
-    </keep-alive>
-    
+      <header-search></header-search>
   </div>
 </template>
 
 <script>
+import HeaderSearch from '@/components/HeaderSearch'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    HeaderSearch
+  },
 }
+
 </script>
 
-<style>
+<style lang="less" scoped>
+  body{
+    height: 100%;
+    overflow-x: hidden;
+  }
+  html{
+    height: 100%;
+    overflow-x: hidden;
+  }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    /* margin-top: 20px; */
-    height: 1000px;
+    height: 100%;
   }
 </style>
 
