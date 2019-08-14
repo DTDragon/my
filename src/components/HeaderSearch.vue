@@ -12,6 +12,7 @@
 
       <div slot="drawer" class="slot-drawer">
         <!-- 菜单内容 -->
+        <Input search placeholder="Enter something..." @on-search="sss"/>
       </div>
       <view-box ref="viewBox" :body-padding-top="isShowNav ? '46px' : '0'" body-padding-bottom="55px">
         <x-header
@@ -104,8 +105,8 @@ export default {
     },
   },
   methods:{
-    getMore(){
-      console(1);
+    sss(value){
+      console.log(value)
     },
     onClickMore () {
       this.showMenu = true
@@ -153,7 +154,7 @@ export default {
       
     }
     .slot-drawer{
-      width: 100px;
+      padding: 10px 10px 0 10px;
       height: 100%;
     }
     .router-view{
